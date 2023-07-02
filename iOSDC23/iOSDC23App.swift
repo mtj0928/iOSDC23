@@ -10,6 +10,8 @@ import SlideKit
 @main
 struct iOSDC23App: App {
 
+    @Environment(\.openWindow) var openWindow
+
     /// Edit slide configurations in SlideConfiguration.swift
     private static let configuration = SlideConfiguration()
 
@@ -18,7 +20,7 @@ struct iOSDC23App: App {
     var presentationContentView: some View {
         SlideRouterView(slideIndexController: Self.configuration.slideIndexController)
             .background(.white)
-            .foregroundColor(.black)
+            .foregroundColor(.label)
     }
 
     var body: some Scene {
@@ -27,10 +29,12 @@ struct iOSDC23App: App {
                 presentationContentView
             }
         }
-        .setupAsPresentationWindow(Self.configuration.slideIndexController, appName: "iOSDC23")
+        .setupAsPresentationWindow(Self.configuration.slideIndexController) {
+            openWindow(id: "presenter")
+        }
         .addPDFExportCommands(for: presentationContentView, with: Self.configuration.slideIndexController, size: Self.configuration.size)
 
-        WindowGroup {
+        WindowGroup(id: "presenter") {
             macOSPresenterView(
                 slideSize: Self.configuration.size,
                 slideIndexController: Self.configuration.slideIndexController

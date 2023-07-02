@@ -3,22 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		134D441E729D590F03A983DB /* SlideKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F5012FCAFA6E86E35777F7B /* SlideKit */; };
-		93515BE7CE8219F8B9C008C1 /* SampleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D816FC899E82476C62AC4337 /* SampleSlide.swift */; };
+		182320602A500C9B00F5C71A /* XcodePreviewSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823205F2A500C9B00F5C71A /* XcodePreviewSlide.swift */; };
+		182320632A500E5D00F5C71A /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182320612A500DBA00F5C71A /* Asset.xcassets */; };
+		182320652A506EF200F5C71A /* CenterTitleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182320642A506EF200F5C71A /* CenterTitleSlide.swift */; };
+		182320692A50F4A300F5C71A /* Color+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182320682A50F4A300F5C71A /* Color+extension.swift */; };
+		183685AA2A4DBA48005EB87A /* TitleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183685A92A4DBA48005EB87A /* TitleSlide.swift */; };
 		C4FA7465D5F995F91E345731 /* SlideConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A67243E4225CF2E6704F5C8 /* SlideConfiguration.swift */; };
 		DC45F76A983D8AC3249E956E /* iOSDC23App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E5AF46FC9F3370109434CD /* iOSDC23App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1823205F2A500C9B00F5C71A /* XcodePreviewSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodePreviewSlide.swift; sourceTree = "<group>"; };
+		182320612A500DBA00F5C71A /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
+		182320642A506EF200F5C71A /* CenterTitleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterTitleSlide.swift; sourceTree = "<group>"; };
+		182320682A50F4A300F5C71A /* Color+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extension.swift"; sourceTree = "<group>"; };
+		183685A92A4DBA48005EB87A /* TitleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSlide.swift; sourceTree = "<group>"; };
 		2A67243E4225CF2E6704F5C8 /* SlideConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideConfiguration.swift; sourceTree = "<group>"; };
 		49D849A30DFD45BB37956D82 /* iOSDC23.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSDC23.entitlements; sourceTree = "<group>"; };
 		5DB58D53F3EFAC0EF8508EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		98E5AF46FC9F3370109434CD /* iOSDC23App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDC23App.swift; sourceTree = "<group>"; };
-		D816FC899E82476C62AC4337 /* SampleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSlide.swift; sourceTree = "<group>"; };
 		F5C1233B4D03D8B7E8506826 /* iOSDC23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDC23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -34,6 +42,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182320662A50F0CA00F5C71A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				182320642A506EF200F5C71A /* CenterTitleSlide.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		182320672A50F49300F5C71A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				182320682A50F4A300F5C71A /* Color+extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		2E6AA240C899D24F5C961416 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +77,8 @@
 		9FB297928BDC69532F7E6D9B /* Slides */ = {
 			isa = PBXGroup;
 			children = (
-				D816FC899E82476C62AC4337 /* SampleSlide.swift */,
+				183685A92A4DBA48005EB87A /* TitleSlide.swift */,
+				1823205F2A500C9B00F5C71A /* XcodePreviewSlide.swift */,
 			);
 			path = Slides;
 			sourceTree = "<group>";
@@ -64,7 +89,10 @@
 				5DB58D53F3EFAC0EF8508EAF /* Info.plist */,
 				49D849A30DFD45BB37956D82 /* iOSDC23.entitlements */,
 				98E5AF46FC9F3370109434CD /* iOSDC23App.swift */,
+				182320612A500DBA00F5C71A /* Asset.xcassets */,
 				2A67243E4225CF2E6704F5C8 /* SlideConfiguration.swift */,
+				182320672A50F49300F5C71A /* Utils */,
+				182320662A50F0CA00F5C71A /* Components */,
 				9FB297928BDC69532F7E6D9B /* Slides */,
 			);
 			path = iOSDC23;
@@ -79,6 +107,7 @@
 			buildPhases = (
 				BD66EEB223094FF4360F69DD /* Sources */,
 				4CFA6F426B6D61B506822F68 /* Frameworks */,
+				182320622A500E5600F5C71A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -99,8 +128,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = AFA15E5756CCD04F9AC86DF5 /* Build configuration list for PBXProject "iOSDC23" */;
 			compatibilityVersion = "Xcode 11.0";
@@ -122,13 +149,27 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		182320622A500E5600F5C71A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182320632A500E5D00F5C71A /* Asset.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BD66EEB223094FF4360F69DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93515BE7CE8219F8B9C008C1 /* SampleSlide.swift in Sources */,
 				C4FA7465D5F995F91E345731 /* SlideConfiguration.swift in Sources */,
+				182320692A50F4A300F5C71A /* Color+extension.swift in Sources */,
+				183685AA2A4DBA48005EB87A /* TitleSlide.swift in Sources */,
+				182320652A506EF200F5C71A /* CenterTitleSlide.swift in Sources */,
+				182320602A500C9B00F5C71A /* XcodePreviewSlide.swift in Sources */,
 				DC45F76A983D8AC3249E956E /* iOSDC23App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,7 +188,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.mtj0928.SlideGen.iOSDC23;
 				SDKROOT = macosx;
@@ -227,7 +268,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.mtj0928.SlideGen.iOSDC23;
 				SDKROOT = macosx;
@@ -317,8 +358,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mtj0928/SlideKit";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
+				branch = "support-macro";
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
