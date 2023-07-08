@@ -16,5 +16,9 @@ struct SlideConfiguration {
     let slideIndexController = SlideIndexController {
         TitleSlide()
         XcodePreviewSlide()
+        SampleAppSlide()
+        SampleAppStructureSlide()
+        SimpleSampleCode.viewCode
+        SimpleSampleCode.viewModelCode
     }
 }

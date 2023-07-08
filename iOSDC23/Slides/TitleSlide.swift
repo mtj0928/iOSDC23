@@ -10,9 +10,9 @@ struct TitleSlide: View {
             Text("Xcode Previewを\n気軽に使うためのDI戦略")
                 .font(.system(size: 120, weight: .heavy))
             Text("まつじ")
-                .font(.system(size: 70, weight: .bold))
+                .font(.system(size: 50, weight: .bold))
             + Text("（@mtj_j）")
-                .font(.system(size: 60, weight: .bold))
+                .font(.system(size: 45, weight: .bold))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .padding(48)
@@ -26,4 +26,3 @@ struct Title_Previews: PreviewProvider {
         }
     }
 }
-

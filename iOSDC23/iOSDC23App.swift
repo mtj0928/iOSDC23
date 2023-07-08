@@ -23,10 +23,22 @@ struct iOSDC23App: App {
             .foregroundColor(.label)
     }
 
+    @AppStorage("last.index")
+    var lastIndex: Int = 0
+
+    init() {
+        let count = Self.configuration.slideIndexController.slides.count
+        Self.configuration.slideIndexController.move(
+            to: max(min(count - 1, lastIndex), 0))
+    }
+
     var body: some Scene {
         WindowGroup {
             PresentationView(slideSize: Self.configuration.size) {
                 presentationContentView
+            }
+            .onReceive(Self.configuration.slideIndexController.$currentIndex) { index in
+                lastIndex = index
             }
         }
         .setupAsPresentationWindow(Self.configuration.slideIndexController) {

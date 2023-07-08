@@ -9,20 +9,34 @@
 /* Begin PBXBuildFile section */
 		134D441E729D590F03A983DB /* SlideKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F5012FCAFA6E86E35777F7B /* SlideKit */; };
 		182320602A500C9B00F5C71A /* XcodePreviewSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823205F2A500C9B00F5C71A /* XcodePreviewSlide.swift */; };
-		182320632A500E5D00F5C71A /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182320612A500DBA00F5C71A /* Asset.xcassets */; };
 		182320652A506EF200F5C71A /* CenterTitleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182320642A506EF200F5C71A /* CenterTitleSlide.swift */; };
 		182320692A50F4A300F5C71A /* Color+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182320682A50F4A300F5C71A /* Color+extension.swift */; };
 		183685AA2A4DBA48005EB87A /* TitleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183685A92A4DBA48005EB87A /* TitleSlide.swift */; };
+		185FD1382A56ED780067C8C9 /* SimpleImplementationSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FD1372A56ED780067C8C9 /* SimpleImplementationSlide.swift */; };
+		185FD13C2A56F6D10067C8C9 /* CodeSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185FD13B2A56F6D10067C8C9 /* CodeSlide.swift */; };
+		186E01AF2A57911600BCB40E /* SampleAppStructureSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186E01AE2A57911600BCB40E /* SampleAppStructureSlide.swift */; };
+		186E01B12A57917900BCB40E /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186E01B02A57917900BCB40E /* AppIcon.swift */; };
+		188725A92A59629800C1A602 /* AgendaSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188725A82A59629800C1A602 /* AgendaSlide.swift */; };
+		188725AB2A59AA8D00C1A602 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188725AA2A59AA8D00C1A602 /* Asset.xcassets */; };
+		18BF72F22A56381A003EC724 /* SampleAppSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF72F12A56381A003EC724 /* SampleAppSlide.swift */; };
+		18BF72F42A56387C003EC724 /* View+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF72F32A56387C003EC724 /* View+Font.swift */; };
 		C4FA7465D5F995F91E345731 /* SlideConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A67243E4225CF2E6704F5C8 /* SlideConfiguration.swift */; };
 		DC45F76A983D8AC3249E956E /* iOSDC23App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E5AF46FC9F3370109434CD /* iOSDC23App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1823205F2A500C9B00F5C71A /* XcodePreviewSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodePreviewSlide.swift; sourceTree = "<group>"; };
-		182320612A500DBA00F5C71A /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		182320642A506EF200F5C71A /* CenterTitleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterTitleSlide.swift; sourceTree = "<group>"; };
 		182320682A50F4A300F5C71A /* Color+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extension.swift"; sourceTree = "<group>"; };
 		183685A92A4DBA48005EB87A /* TitleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSlide.swift; sourceTree = "<group>"; };
+		185FD1372A56ED780067C8C9 /* SimpleImplementationSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleImplementationSlide.swift; sourceTree = "<group>"; };
+		185FD13B2A56F6D10067C8C9 /* CodeSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSlide.swift; sourceTree = "<group>"; };
+		186E01AE2A57911600BCB40E /* SampleAppStructureSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppStructureSlide.swift; sourceTree = "<group>"; };
+		186E01B02A57917900BCB40E /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		188725A82A59629800C1A602 /* AgendaSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaSlide.swift; sourceTree = "<group>"; };
+		188725AA2A59AA8D00C1A602 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
+		18BF72F12A56381A003EC724 /* SampleAppSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppSlide.swift; sourceTree = "<group>"; };
+		18BF72F32A56387C003EC724 /* View+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Font.swift"; sourceTree = "<group>"; };
 		2A67243E4225CF2E6704F5C8 /* SlideConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideConfiguration.swift; sourceTree = "<group>"; };
 		49D849A30DFD45BB37956D82 /* iOSDC23.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSDC23.entitlements; sourceTree = "<group>"; };
 		5DB58D53F3EFAC0EF8508EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				182320642A506EF200F5C71A /* CenterTitleSlide.swift */,
+				185FD13B2A56F6D10067C8C9 /* CodeSlide.swift */,
+				18BF72F32A56387C003EC724 /* View+Font.swift */,
+				186E01B02A57917900BCB40E /* AppIcon.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -78,6 +95,10 @@
 			isa = PBXGroup;
 			children = (
 				183685A92A4DBA48005EB87A /* TitleSlide.swift */,
+				188725A82A59629800C1A602 /* AgendaSlide.swift */,
+				18BF72F12A56381A003EC724 /* SampleAppSlide.swift */,
+				186E01AE2A57911600BCB40E /* SampleAppStructureSlide.swift */,
+				185FD1372A56ED780067C8C9 /* SimpleImplementationSlide.swift */,
 				1823205F2A500C9B00F5C71A /* XcodePreviewSlide.swift */,
 			);
 			path = Slides;
@@ -89,7 +110,7 @@
 				5DB58D53F3EFAC0EF8508EAF /* Info.plist */,
 				49D849A30DFD45BB37956D82 /* iOSDC23.entitlements */,
 				98E5AF46FC9F3370109434CD /* iOSDC23App.swift */,
-				182320612A500DBA00F5C71A /* Asset.xcassets */,
+				188725AA2A59AA8D00C1A602 /* Asset.xcassets */,
 				2A67243E4225CF2E6704F5C8 /* SlideConfiguration.swift */,
 				182320672A50F49300F5C71A /* Utils */,
 				182320662A50F0CA00F5C71A /* Components */,
@@ -155,7 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182320632A500E5D00F5C71A /* Asset.xcassets in Resources */,
+				188725AB2A59AA8D00C1A602 /* Asset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,9 +187,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186E01B12A57917900BCB40E /* AppIcon.swift in Sources */,
+				188725A92A59629800C1A602 /* AgendaSlide.swift in Sources */,
+				18BF72F22A56381A003EC724 /* SampleAppSlide.swift in Sources */,
+				186E01AF2A57911600BCB40E /* SampleAppStructureSlide.swift in Sources */,
+				185FD13C2A56F6D10067C8C9 /* CodeSlide.swift in Sources */,
 				C4FA7465D5F995F91E345731 /* SlideConfiguration.swift in Sources */,
 				182320692A50F4A300F5C71A /* Color+extension.swift in Sources */,
 				183685AA2A4DBA48005EB87A /* TitleSlide.swift in Sources */,
+				185FD1382A56ED780067C8C9 /* SimpleImplementationSlide.swift in Sources */,
+				18BF72F42A56387C003EC724 /* View+Font.swift in Sources */,
 				182320652A506EF200F5C71A /* CenterTitleSlide.swift in Sources */,
 				182320602A500C9B00F5C71A /* XcodePreviewSlide.swift in Sources */,
 				DC45F76A983D8AC3249E956E /* iOSDC23App.swift in Sources */,
