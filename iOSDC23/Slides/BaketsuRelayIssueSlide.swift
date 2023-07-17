@@ -14,15 +14,10 @@ struct BaketsuRelayIssueSlide: View {
             Item("検索画面はAPIを叩くだけなのに、DBの情報も渡す必要がある", accessory: nil)
             Code(
                 """
-                struct ItemListView_Previews: PreviewProvider {
-                    static var previews: some View {
-                        let viewModel = ItemListViewModel(apiClient: MockAPIClient())
-                        ItemListView(
-                            db: MockDatabase(),
-                            viewModel: viewModel
-                        )
-                    }
-                }
+                ItemListView(
+                    db: MockDatabase(),
+                    viewModel: ItemListViewModel(apiClient: MockAPIClient())
+                )
                 """,
 
                 fontSize: 40
@@ -36,11 +31,11 @@ struct BaketsuRelayIssueSlide: View {
         .overlay(alignment: .topLeading) {
             if step.isAfter(.tip) {
                 Color.white.opacity(0.7)
-                    .frame(height: 220)
-                    .offset(x: 0, y: 380)
+                    .frame(height: 60)
+                    .offset(x: 0, y: 360)
                 Color.white.opacity(0.7)
-                    .frame(height: 220)
-                    .offset(x: 0, y: 650)
+                    .frame(height: 120)
+                    .offset(x: 0, y: 500)
             }
         }
         .overlay {
@@ -58,7 +53,7 @@ struct BaketsuRelayIssueSlide: View {
                         .foregroundStyle(Color.label)
                 }
                 .foregroundStyle(.white)
-                .offset(x: 10, y: 85)
+                .offset(x: -200, y: -70)
             }
         }
     }

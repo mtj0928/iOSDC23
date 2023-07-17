@@ -34,5 +34,6 @@ struct SlideConfiguration {
         EnvironmentSlide()
         EnvironmentIssue1Slide()
         EnvironmentIssue2Slide()
+        IssueComparingSlide()
     }
 }
