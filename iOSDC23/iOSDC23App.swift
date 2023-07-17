@@ -21,6 +21,8 @@ struct iOSDC23App: App {
         SlideRouterView(slideIndexController: Self.configuration.slideIndexController)
             .background(.white)
             .foregroundColor(.label)
+            .headerSlideStyle(CustomHeaderSlideStyle())
+            .itemStyle(CustomItemStyle())
     }
 
     @AppStorage("last.index")

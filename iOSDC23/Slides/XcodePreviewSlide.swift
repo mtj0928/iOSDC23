@@ -15,6 +15,7 @@ struct XcodePreviewSlide: View {
                 .shadow(radius: 18)
                 .padding(.trailing, 48)
         }
+        .allowsHitTesting(false)
     }
 }
 

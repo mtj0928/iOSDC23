@@ -21,18 +21,4 @@ struct AgendaSlide_Previews: PreviewProvider {
     }
 }
 
-struct CustomHeaderSlideStyle: HeaderSlideStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        VStack(alignment: .leading, spacing: 80) {
-            configuration.header
-                .font(.system(size: 110, weight: .heavy))
-            VStack(alignment: .leading, spacing: 48) {
-                configuration.content
-            }
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .padding(.horizontal, 48)
-        .padding(.vertical, 60)
-        .foregroundStyle(Color.label)
-    }
-}
+

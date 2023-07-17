@@ -31,6 +31,7 @@ struct CodeSlide: View {
 //                ]
 //            ),
             fontSize: 40)
+        .lineSpacing(4)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .padding(.horizontal, 48)
         .padding(.vertical, 100)

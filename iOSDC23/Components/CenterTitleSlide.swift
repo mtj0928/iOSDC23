@@ -11,9 +11,12 @@ struct CenterTitleSlide: View {
 
     var body: some View {
         Text(text)
-            .font(.system(size: 140, weight: .bold))
+            .font(.system(size: 98, weight: .bold))
             .foregroundStyle(Color.label)
+            .multilineTextAlignment(.center)
     }
+
+    var shouldHideIndex: Bool { true }
 }
 
 struct CenterTitleSlide_Previews: PreviewProvider {

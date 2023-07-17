@@ -18,7 +18,21 @@ struct SlideConfiguration {
         XcodePreviewSlide()
         SampleAppSlide()
         SampleAppStructureSlide()
-        SimpleSampleCode.viewCode
-        SimpleSampleCode.viewModelCode
+        SearchScreenCaptureSlide()
+        SimpleSampleViewCodeSlide()
+        SimpleSampleCode.previewCode
+        SimpleImplementationIssueSlide()
+        CenterTitleSlide("Dependency Injection")
+        SimpleDISampleViewModelCodeSlide()
+        SimpleDISampleViewCodeSlide()
+        SimpleDIMockSlide()
+        InitInjectionSlide()
+        PassingHardAppStructureSlide()
+        BaketsuRelayIssueSlide()
+        BaketsuRelayIssue2Slide()
+        CenterTitleSlide("@Environment\n@EnvironmentObject")
+        EnvironmentSlide()
+        EnvironmentIssue1Slide()
+        EnvironmentIssue2Slide()
     }
 }
