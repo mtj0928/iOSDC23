@@ -120,23 +120,7 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		2E6AA240C899D24F5C961416 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F5C1233B4D03D8B7E8506826 /* iOSDC23.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7EB69CE8C26DDAA941E5CBBF = {
-			isa = PBXGroup;
-			children = (
-				C34478751FBCE81448CD1448 /* iOSDC23 */,
-				2E6AA240C899D24F5C961416 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		9FB297928BDC69532F7E6D9B /* Slides */ = {
+		18911C612A6549AC0047652B /* Issues */ = {
 			isa = PBXGroup;
 			children = (
 				183685A92A4DBA48005EB87A /* TitleSlide.swift */,
@@ -158,6 +142,30 @@
 				1839F58D2A64CDF9007BE136 /* EnvironmentIssue1Slide.swift */,
 				1839F58F2A64D4CA007BE136 /* EnvironmentIssue2Slide.swift */,
 				18BFE4722A64EF1A00302D33 /* IssueComparingSlide.swift */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		2E6AA240C899D24F5C961416 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5C1233B4D03D8B7E8506826 /* iOSDC23.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EB69CE8C26DDAA941E5CBBF = {
+			isa = PBXGroup;
+			children = (
+				C34478751FBCE81448CD1448 /* iOSDC23 */,
+				2E6AA240C899D24F5C961416 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FB297928BDC69532F7E6D9B /* Slides */ = {
+			isa = PBXGroup;
+			children = (
+				18911C612A6549AC0047652B /* Issues */,
 			);
 			path = Slides;
 			sourceTree = "<group>";
