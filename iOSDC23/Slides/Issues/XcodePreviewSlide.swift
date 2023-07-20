@@ -17,6 +17,15 @@ struct XcodePreviewSlide: View {
         }
         .allowsHitTesting(false)
     }
+
+    var script: String {
+        """
+        Xcode Preview、みなさん使っていますか？
+        Xcode Previewはアプリをビルドすることなく、UIの動作確認ができるため、開発のスピードを向上させることができます。
+        しかし、使うにも課題があります。
+        今日の発表ではその課題のうちの一つ、DIに着目し、みなさんがもっと気軽にXcode Previewを使えるよう、僕の知見を共有したいと思います。
+        """
+    }
 }
 
 struct XcodePreviewSlide_Previews: PreviewProvider {

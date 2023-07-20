@@ -17,8 +17,8 @@ struct SlideConfiguration {
         TitleSlide()
         XcodePreviewSlide()
         SampleAppSlide()
-        SampleAppStructureSlide()
         SearchScreenCaptureSlide()
+        SampleAppStructureSlide()
         SimpleSampleViewCodeSlide()
         SimpleSampleCode.previewCode
         SimpleImplementationIssueSlide()
@@ -35,5 +35,8 @@ struct SlideConfiguration {
         EnvironmentIssue1Slide()
         EnvironmentIssue2Slide()
         IssueComparingSlide()
+        DependencyProviderSlide()
+        ConceptSlide()
+        XcodePreviewConcernSlide()
     }
 }

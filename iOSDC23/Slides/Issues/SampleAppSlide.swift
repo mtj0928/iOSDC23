@@ -44,6 +44,15 @@ struct SampleAppSlide: View {
             }
         }
     }
+
+    var script: String {
+        """
+        今日の発表は具体的な例がないとイメージがつきにくいと思ったので、サンプルアプリを用意しました。
+        QiitaViewerです。
+        このアプリは、Qiitaの記事を検索し、気に入った記事を端末に保存するアプリです。
+        少し発表の本題に入る前に、このアプリがどういう課題を抱えているのかみてみましょう。
+        """
+    }
 }
 
 struct SampleAppSlide_Previews: PreviewProvider {

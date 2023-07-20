@@ -17,6 +17,12 @@ struct TitleSlide: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .padding(48)
     }
+
+    var script: String {
+        """
+        こんにちは、まつじです。
+        """
+    }
 }
 
 struct Title_Previews: PreviewProvider {

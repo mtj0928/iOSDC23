@@ -15,10 +15,10 @@ struct SampleAppStructure: View {
     }
 
     let step: Step
-    let imageHeight: CGFloat = 800
 
     var highlight: Highlight? = nil
     var scale: Scale?
+    var height: CGFloat = 800
 
     var body: some View {
         HStack(alignment: .center, spacing: 48) {
@@ -40,7 +40,7 @@ struct SampleAppStructure: View {
                 .stroke(style: stroke)
                 .foregroundColor(.label)
                 .frame(width: 240)
-                .padding(.vertical, (imageHeight / 3) / 2)
+                .padding(.vertical, (height / 3) / 2)
                 .opacity(step == .initial ? 0.0 : 1.0)
                 .overlay {
                     if step == .initial {
@@ -87,15 +87,15 @@ struct SampleAppStructure: View {
             }
             .opacity(step == .initial ? 0.0 : 1.0)
             .animation(.easeInOut(duration: 0.3).delay(0.5), value: step)
-            .frame(height: imageHeight)
+            .frame(height: height)
 
             HStack(spacing: 48) {
                 BranchingLine(branchCount: 2, branchRation: 0.5, leadingToTrailing: false)
                     .stroke(style: stroke)
                     .foregroundColor(.label)
                     .frame(width: 120)
-                    .padding(.vertical, (imageHeight / 3) / 2)
-                    .frame(height: imageHeight * 2 / 3, alignment: .top)
+                    .padding(.vertical, (height / 3) / 2)
+                    .frame(height: height * 2 / 3, alignment: .top)
                     .opacity(step.isAfter(.detail) ? 1 : 0)
                     .overlay {
                         if !step.isAfter(.detail) {
@@ -123,10 +123,10 @@ struct SampleAppStructure: View {
                         }
                     }
             }
-            .frame(height: imageHeight * 2 / 3)
+            .frame(height: height * 2 / 3)
             .frame(maxHeight: .infinity, alignment: .top)
         }
-        .frame(height: imageHeight)
+        .frame(height: height)
         .padding(.horizontal, 48)
     }
 
