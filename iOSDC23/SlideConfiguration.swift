@@ -16,6 +16,8 @@ struct SlideConfiguration {
     let slideIndexController = SlideIndexController {
         TitleSlide()
         XcodePreviewSlide()
+        AgendaSlide()
+        AgendaSlide(highlight: 1)
         SampleAppSlide()
         SearchScreenCaptureSlide()
         SampleAppStructureSlide()
@@ -35,8 +37,16 @@ struct SlideConfiguration {
         EnvironmentIssue1Slide()
         EnvironmentIssue2Slide()
         IssueComparingSlide()
-        DependencyProviderSlide()
-        ConceptSlide()
+
+        AgendaSlide(highlight: 2)
         XcodePreviewConcernSlide()
+        IdeaSlide()
+        DependencyProviderSlide()
+        DependencyProviderImplementation1Slide()
+        DependencyProviderImplementation2Slide()
+        DependencyProviderImplementation3Slide()
+        HowToUseDependencyProvider1Slide()
+        HowToUseDependencyProvider2Slide()
+        PreviewImageSlide()
     }
 }
