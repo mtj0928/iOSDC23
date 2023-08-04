@@ -18,6 +18,13 @@ struct DependencyProviderImplementation1Slide: View {
             .lineSpacing(4)
         }
     }
+
+    var script: String {
+        """
+        まずはDIされうる可能性のあるオブジェクトをstructにまとめます。
+        今回の場合、API ClientとDatabaseの二つが依存として考えられるので、これをまとめたAppDependencyを用意します。
+        """
+    }
 }
 
 struct DependencyProviderImplementation1Slide_Previews: PreviewProvider {

@@ -61,7 +61,7 @@ struct EnvironmentIssue1Slide: View {
         switch step {
         case .initial:
             """
-            しかしEnvironmentを使った場合にも課題はあります。
+            しかしEnvironmentを使った方法にも課題はあります。
             一つ目に必要な依存がわからないということです。
             先ほどのItemListViewに対してXcode Previewをしようとすると、以下のようになります。
             Environmentを使って、MockAPIClientをDIしています。

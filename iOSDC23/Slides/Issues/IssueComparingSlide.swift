@@ -16,6 +16,16 @@ struct IssueComparingSlide: View {
             }
         }
     }
+
+    var script: String {
+        """
+        さて、ここまでの課題をまとめてみましょう。
+        Initializer Injectionはバケツリレーが必要で、画面の数が増えるほど渡す依存の数が増えて、Xcode Previewを試しにくくなります。
+        また、Xcode PreviewをしたいViewに対してどの依存が実際に必要か曖昧で、Previewをする時のmockに困ります。
+        一方でEnvironmentを使ったやり方だと、何をDIすべきかコンパイラはわからないという課題があります。
+        また、initではアクセスできないので、ObservableObjectを作るには工夫が必要です。
+        """
+    }
 }
 
 struct IssueComparingSlide_Previews: PreviewProvider {

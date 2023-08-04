@@ -43,6 +43,19 @@ struct SimpleDISampleViewCodeSlide: View {
             }
         }
     }
+
+    var script: String {
+        switch step {
+        case .initial:
+            """
+            そして、ItemListViewでは、
+            """
+        case .tipInit:
+            """
+            ItemListViewModelを内部で生成するのをやめて、外からDIするようにします。
+            """
+        }
+    }
 }
 
 struct SimpleDISampleViewCodeSlide_Previews: PreviewProvider {

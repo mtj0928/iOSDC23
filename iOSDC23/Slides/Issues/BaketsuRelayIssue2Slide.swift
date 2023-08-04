@@ -23,6 +23,22 @@ struct BaketsuRelayIssue2Slide: View {
         }
         .lineSpacing(10)
     }
+
+    var script: String {
+        switch step {
+        case .initial:
+            """
+            画面の数が増えていくほどに用意する依存の数が増えてしまうので、結果としてXcode Previewを気軽に使うのが難しくなってしまくいます。
+            """
+        case .itemA:
+            """
+            Xcode PreviewをしたいViewがどの依存に対して実際に操作するのか呼び出し側にはわからないです。
+            さっきの例だと、DBを触るのか、それともAPIを叩くのかは不透明です。
+            これはXcode Previewをする時に、どの値をモックしたらどこにどう反映されるのかを把握するのが難しくなります。
+            作ったばっかのViewならまだしも、作ってから時間が経ったViewの場合、これは結構辛い問題です。
+            """
+        }
+    }
 }
 
 struct BaketsuRelayIssue2Slide_Previews: PreviewProvider {

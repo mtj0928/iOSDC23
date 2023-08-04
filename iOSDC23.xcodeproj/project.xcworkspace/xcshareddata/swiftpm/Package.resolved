@@ -6,7 +6,7 @@
       "location" : "https://github.com/mtj0928/SlideKit",
       "state" : {
         "branch" : "support-macro",
-        "revision" : "f46a0ec9e7a6ed1c4b62cbb8b4e6f813487fe8e8"
+        "revision" : "9d56a68c120130319b99090f1cdba3edeb08ee8d"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
-        "revision" : "f1e9245226002bb134884345d4809b9543da3666",
-        "version" : "509.0.0-swift-DEVELOPMENT-SNAPSHOT-2023-06-17-a"
+        "revision" : "67c5007099d9ffdd292f421f81f4efe5ee42963e",
+        "version" : "509.0.0-swift-DEVELOPMENT-SNAPSHOT-2023-07-10-a"
       }
     },
     {

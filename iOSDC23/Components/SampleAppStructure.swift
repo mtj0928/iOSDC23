@@ -7,7 +7,7 @@ struct SampleAppStructure: View {
     }
 
     enum Highlight {
-        case search, detail
+        case search, detail, icon, path
     }
 
     enum Scale {
@@ -16,7 +16,7 @@ struct SampleAppStructure: View {
 
     let step: Step
 
-    var highlight: Highlight? = nil
+    var highlight: [Highlight] = []
     var scale: Scale?
     var height: CGFloat = 800
 
@@ -29,7 +29,7 @@ struct SampleAppStructure: View {
                     .footnote()
             }
             .overlay {
-                if highlight != nil {
+                if !highlight.contains(.icon) && !highlight.isEmpty {
                     Color.white.padding(-40)
                         .opacity(0.8)
                 }
@@ -39,31 +39,35 @@ struct SampleAppStructure: View {
             BranchingLine(branchCount: 3, branchRation: 0.3)
                 .stroke(style: stroke)
                 .foregroundColor(.label)
-                .frame(width: 240)
-                .padding(.vertical, (height / 3) / 2)
-                .opacity(step == .initial ? 0.0 : 1.0)
                 .overlay {
-                    if step == .initial {
-                        Rectangle()
-                            .foregroundStyle(.white)
-                            .transition(.move(edge: .trailing))
-                    }
-                }
-                .animation(.easeInOut(duration: 0.4), value: step)
-                .overlay {
-                    if highlight != nil {
+                    if !highlight.isEmpty {
                         Color.white.padding(-4)
                             .opacity(0.8)
                     }
                 }
+                .opacity(step == .initial ? 0.0 : 1.0)
+                .overlay {
+                    if !highlight.isEmpty && highlight.contains(.path) {
+                        BranchingLine(branchCount: 3, branchRation: 0.3) { index in
+                            index == 0
+                        }
+                        .stroke(style:  StrokeStyle(
+                            lineWidth: 6,
+                            lineCap: .round,
+                            lineJoin: .round
+                        ))
+                        .foregroundStyle(.red)
+                    }
+                }
+                .frame(width: 240)
+                .padding(.vertical, (height / 3) / 2)
 
             VStack {
                 screenBox("記事の検索").foregroundColor(.red)
                     .scaleEffect(scale == .search ? 1.15 : 1.0 )
-                    .animation(.default.speed(1.5), value: scale)
                     .zIndex(3)
                     .overlay {
-                        if highlight != nil && highlight != .search {
+                        if !highlight.contains(.search) && !highlight.isEmpty {
                             Color.white.padding(-4)
                                 .opacity(0.8)
                         }
@@ -71,7 +75,7 @@ struct SampleAppStructure: View {
                 screenBox("保存済み記事の一覧")
                     .foregroundColor(.blue)
                     .overlay {
-                        if highlight != nil {
+                        if !highlight.isEmpty {
                             Color.white.padding(-4)
                                 .opacity(0.8)
                         }
@@ -79,45 +83,48 @@ struct SampleAppStructure: View {
                 screenBox("アカウント設定")
                     .foregroundColor(.gray)
                     .overlay {
-                        if highlight != nil {
+                        if !highlight.isEmpty {
                             Color.white.padding(-4)
                                 .opacity(0.8)
                         }
                     }
             }
             .opacity(step == .initial ? 0.0 : 1.0)
-            .animation(.easeInOut(duration: 0.3).delay(0.5), value: step)
             .frame(height: height)
 
             HStack(spacing: 48) {
                 BranchingLine(branchCount: 2, branchRation: 0.5, leadingToTrailing: false)
                     .stroke(style: stroke)
                     .foregroundColor(.label)
-                    .frame(width: 120)
-                    .padding(.vertical, (height / 3) / 2)
-                    .frame(height: height * 2 / 3, alignment: .top)
-                    .opacity(step.isAfter(.detail) ? 1 : 0)
                     .overlay {
-                        if !step.isAfter(.detail) {
-                            Rectangle()
-                                .foregroundStyle(.white)
-                                .transition(.move(edge: .trailing))
-                        }
-                    }
-                    .animation(.easeInOut(duration: 0.3), value: step)
-                    .overlay {
-                        if highlight != nil {
+                        if !highlight.isEmpty {
                             Color.white.padding(-10)
                                 .opacity(0.8)
                         }
                     }
+                    .overlay {
+                        if !highlight.isEmpty && highlight.contains(.path) {
+                            BranchingLine(branchCount: 2, branchRation: 0.5, leadingToTrailing: false) { index in
+                                index == 0
+                            }
+                            .stroke(style:  StrokeStyle(
+                                lineWidth: 6,
+                                lineCap: .round,
+                                lineJoin: .round
+                            ))
+                            .foregroundStyle(.red)
+                        }
+                    }
+                    .frame(width: 120)
+                    .padding(.vertical, (height / 3) / 2)
+                    .frame(height: height * 2 / 3, alignment: .top)
+                    .opacity(step.isAfter(.detail) ? 1 : 0)
 
                 screenBox("記事の詳細")
                     .foregroundColor(.orange)
                     .opacity(step.isAfter(.detail) ? 1 : 0)
-                    .animation(.easeInOut(duration: 0.3).delay(0.4), value: step)
                     .overlay {
-                        if highlight != nil && highlight != .detail {
+                        if !highlight.contains(.detail) && !highlight.isEmpty {
                             Color.white.padding(-10)
                                 .opacity(0.8)
                         }
@@ -159,7 +166,7 @@ struct SampleAppStructure_Previews: PreviewProvider {
     static var previews: some View {
         SlidePreview {
             SlideAdapter {
-                SampleAppStructure(step: .detail, highlight: .search)
+                SampleAppStructure(step: .detail, highlight: [.search, .icon])
             }
         }
     }

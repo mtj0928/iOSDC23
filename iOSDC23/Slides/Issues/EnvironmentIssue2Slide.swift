@@ -60,6 +60,21 @@ struct EnvironmentIssue2Slide: View {
             }
         }
     }
+
+    var script: String {
+        switch step {
+        case .initial:
+            """
+            2つ目の課題として、initでEnvironmentにアクセスができないという 課題です。
+            例えば、APIClientを元にViewModelを使いたい、というシチュエーションはよくあるケースのように感じます。
+            """
+        case .tip:
+            """
+            しかしAPIClientがEnvironment経由でパスされている場合、initの中でEnvironmentの値にアクセスすることができません。
+            アクセスしようとすると、XcodeがRuntimeで警告をだします。
+            """
+        }
+    }
 }
 
 struct EnvironmentIssue2Slide_Previews: PreviewProvider {

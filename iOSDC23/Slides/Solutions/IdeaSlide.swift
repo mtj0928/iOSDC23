@@ -186,6 +186,30 @@ struct IdeaSlide: View {
             lineJoin: .round
         )
     }
+
+    var script: String {
+        switch step {
+        case .initial:
+            "再度QiitaViewerのアプリの画面構造を見てみましょう"
+        case .step1:
+            """
+            各画面は独立して、Xcode Previewで動作確認したい関心です。
+            """
+        case .step2:
+            """
+            一方で、各画面間がどうなっているのかは多くの場合、Xcode Previewの関心の対象外だと考えられます。
+            そしてこのXcode PreviewでPreviewしたい対象かどうかで異なるDIのアプローチを取ります。
+            """
+        case .initializer:
+            """
+            Xcode Previewの関心の範囲について、Initializer Injectionを、
+            """
+        case .environment:
+            """
+            Xcode Previewの関心の範囲外について、Environmentを使ったDIを行います。
+            """
+        }
+    }
 }
 
 struct IdeaSlide_Previews: PreviewProvider {

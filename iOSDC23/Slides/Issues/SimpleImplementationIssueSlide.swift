@@ -13,6 +13,15 @@ struct SimpleImplementationIssueSlide: View {
             }
         }
     }
+
+    var script: String {
+        """
+        しかし、今見た実装にはいくつかの課題があります。
+        まず始めに、Xcode Previewをするたび、実際のネットワーク通信が毎回走ってしまうことです。
+        そして、UIのステータスのコントロールができないのも問題です。
+        例えば、APIの呼び出しに成功した時、失敗した時、そしてAPI呼び出しをしてい間、といった状態のUI を今の実装では確認することができません。
+        """
+    }
 }
 
 struct SimpleImplementationIssueSlide_Previews: PreviewProvider {

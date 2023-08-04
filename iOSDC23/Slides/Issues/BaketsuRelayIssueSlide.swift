@@ -69,13 +69,30 @@ struct BaketsuRelayIssueSlide: View {
             }
             .offset(x: 20, y: y)
     }
+
+    var script: String {
+        switch step {
+        case .initial:
+            """
+            これがバケツリレーの課題です。
+            検索画面はAPIを叩くだけなのに、遷移先の画面のためにDBも受け取る必要が出てきてしまいます。
+            このItemListViewをインターフェースを見た時に
+            """
+        case .tip:
+            """
+            「これ必要...？」と感じます。
+            """
+        case .comment:
+            "そしてこれは画面の数が増えれば増えるほど、「なんでこれが必要なのか？」と感じるパラメーターが増えます。"
+        }
+    }
 }
 
 struct BaketsuRelayIssueSlide_Previews: PreviewProvider {
     static var previews: some View {
         SlidePreview {
             BaketsuRelayIssueSlide()
-                .phase(.tip)
+                .phase(.initial)
         }
         .headerSlideStyle(CustomHeaderSlideStyle())
         .itemStyle(CustomItemStyle())

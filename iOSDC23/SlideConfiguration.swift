@@ -22,9 +22,10 @@ struct SlideConfiguration {
         SearchScreenCaptureSlide()
         SampleAppStructureSlide()
         SimpleSampleViewCodeSlide()
-        SimpleSampleCode.previewCode
+        SimpleSamplePreviewCodeSlide()
         SimpleImplementationIssueSlide()
         CenterTitleSlide("Dependency Injection")
+        CenterTitleSlide("Initializer Injection")
         SimpleDISampleViewModelCodeSlide()
         SimpleDISampleViewCodeSlide()
         SimpleDIMockSlide()
@@ -48,5 +49,11 @@ struct SlideConfiguration {
         HowToUseDependencyProvider1Slide()
         HowToUseDependencyProvider2Slide()
         PreviewImageSlide()
+        Benefit1Slide()
+        Benefit2Slide()
+        Benefit3Slide()
+        UIKitSlide()
+
+        WrapUpSlide()
     }
 }

@@ -17,6 +17,15 @@ struct EnvironmentSlide: View {
             """
         )
     }
+
+    var script: String {
+        """
+        Environmentの使い方はこんな感じですね。
+        アプリのRootとなるViewに対して、environmentとして、APIやdatabaseを渡します。
+        このEnvironmentを使いたいViewは、EnvironmentのpropertyWrapperを使って、取り出せることができます。
+        このやり方だと、バケツリレーが発生しないので、良さそうです。
+        """
+    }
 }
 
 struct EnvironmentSlide_Previews: PreviewProvider {

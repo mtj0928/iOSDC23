@@ -14,11 +14,11 @@ struct PassingHardAppStructureSlide: View {
             .overlay {
                 if step.isAfter(.tipC) {
                     Bubble(
-                        orientation: .top,
+                        orientation: .bottom,
                         tipSize: CGSize(width: 20, height: 40),
-                        tipPositionRatio: 0.3
+                        tipPositionRatio: 0.7
                     ) {
-                        (Text("APIClientと") + Text("DB").foregroundColor(.red) + Text("が必要"))
+                        Text("APIClientとDBを渡す")
                             .footnote()
                             .padding(32)
                     }
@@ -28,8 +28,11 @@ struct PassingHardAppStructureSlide: View {
                             .foregroundStyle(Color.label)
                     }
                     .foregroundStyle(.white)
-                    .offset(x: -20, y: -140)
-                } else if step.isAfter(.tipA) {
+                    .offset(x: -520, y: -370)
+                }
+            }
+            .overlay {
+                if step.isAfter(.tipA) {
                     Bubble(
                         orientation: .top,
                         tipSize: CGSize(width: 20, height: 40),
@@ -38,18 +41,17 @@ struct PassingHardAppStructureSlide: View {
                         Text("APIClientが必要")
                             .footnote()
                             .padding(32)
-                            .opacity(step.isAfter(.tipB) ? 0.2 : 1.0)
                     }
                     .bubbleShape { shape in
                         shape
                             .stroke(lineWidth: 2)
                             .foregroundStyle(Color.label)
-                            .opacity(step.isAfter(.tipB) ? 0.2 : 1.0)
                     }
                     .foregroundStyle(.white)
                     .offset(x: -20, y: -140)
                 }
-            }.overlay {
+            }
+            .overlay {
                 if step.isAfter(.tipB) {
                     Bubble(
                         orientation: .top,
@@ -59,13 +61,11 @@ struct PassingHardAppStructureSlide: View {
                         Text("DBが必要")
                             .footnote()
                             .padding(32)
-                            .opacity(step.isAfter(.tipC) ? 0.2 : 1.0)
                     }
                     .bubbleShape { shape in
                         shape
                             .stroke(lineWidth: 2)
                             .foregroundStyle(Color.label)
-                            .opacity(step.isAfter(.tipC) ? 0.2 : 1.0)
                     }
                     .foregroundStyle(.white)
                     .offset(x: 580, y: 0)
@@ -73,12 +73,34 @@ struct PassingHardAppStructureSlide: View {
             }
     }
 
-    var highlight: SampleAppStructure.Highlight? {
+    var script: String {
         switch step {
-        case .initial: return nil
-        case .tipA: return .search
-        case .tipB: return .detail
-        case .tipC: return .search
+        case .initial:
+            """
+            QiitaViewerはこのような画面遷移を辿るアプリでした。
+            """
+        case .tipA:
+            """
+            さっき見たように記事の検索画面では、APIClientが必要でした。
+            """
+        case .tipB:
+            """
+            一方で遷移先の記事の詳細画面では、記事を保存するためにDBが必要です。
+            すると、どうなるか、ですが、
+            """
+        case .tipC:
+            """
+            記事の検索画面を表示するためには、APIClientだけでなく、DBも渡す必要が出てきてしまいます。
+            """
+        }
+    }
+
+    var highlight: [SampleAppStructure.Highlight] {
+        switch step {
+        case .initial: return []
+        case .tipA: return [.search]
+        case .tipB: return [.detail, .search]
+        case .tipC: return [.search, .detail, .path, .icon]
         }
     }
 
@@ -100,7 +122,7 @@ struct PassingHardAppStructureSlide_Previews: PreviewProvider {
     static var previews: some View {
         SlidePreview {
             PassingHardAppStructureSlide()
-                .phase(.tipC)
+                .phase(.tipA)
         }
     }
 }

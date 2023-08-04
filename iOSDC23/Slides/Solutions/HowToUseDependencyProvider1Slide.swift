@@ -10,7 +10,7 @@ struct HowToUseDependencyProvider1Slide: View {
 
     var body: some View {
         HeaderSlide("DependencyProviderの使い方") {
-            Item("各ViewのinitではそのViewが必要な依存だけを宣言する (やりたかったこと)", accessory: 1)
+            Item("各ViewのinitではそのViewが必要な依存だけを宣言する", accessory: 1)
             Code(code, fontSize: 40)
                 .lineSpacing(4)
         }
@@ -40,6 +40,21 @@ struct HowToUseDependencyProvider1Slide: View {
                     ItemListView(viewModel: viewModel)
                 }
             }
+            """
+        }
+    }
+
+    var script: String {
+        switch step {
+        case .initial:
+            """
+            まずは各Viewのinitでは必要な依存だけを宣言するようにします。
+            遷移先の画面に必要な依存はここでは宣言しません。
+            """
+        case .full:
+            """
+            Xcode Previewを利用するのは簡単です。
+            その画面を表示するために必要な依存を渡すだけです。
             """
         }
     }

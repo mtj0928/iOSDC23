@@ -9,8 +9,8 @@ struct DependencyProviderSlide: View {
 
     var script: String {
         """
-        ここからは、今見た課題を解決する方法を紹介します。
-        僕はこの方法をDependency Providerと呼んでいます。
+        僕このアプローチをDependency Providerと呼んでいます。
+        では、ここからはDependency Providerの詳細な実装を見ていきましょう。
         """
     }
 }

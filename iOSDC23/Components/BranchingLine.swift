@@ -4,6 +4,7 @@ struct BranchingLine: Shape {
     var branchCount: Int = 3
     var branchRation: CGFloat = 0.5
     var leadingToTrailing = true
+    var activeLine: @Sendable (Int) -> Bool = { _ in true }
 
     func path(in rect: CGRect) -> Path {
         Path { path in
@@ -16,6 +17,7 @@ struct BranchingLine: Shape {
             path.addLine(to: CGPoint(x: branchingPointX, y: maxY / 2))
 
             for index in 0..<branchCount {
+                guard activeLine(index) else { continue }
                 path.move(to: CGPoint(x: branchingPointX, y: maxY / 2))
 
                 let y = CGFloat(index) * maxY / CGFloat(branchCount - 1)

@@ -88,6 +88,24 @@ struct HowToUseDependencyProvider2Slide: View {
                     .foregroundStyle(.blue)
             }
     }
+
+    var script: String {
+        switch step {
+        case .initial:
+            """
+            他のViewを表示するときはさっき作ったDependencyProviderを挟んで表示をします。
+            navigationを使って画面遷移する例を見てみましょう。
+            """
+        case .tipA:
+            """
+            DependencyProviderの実装でみたように、ここではunwrapされた依存が渡されます。
+            """
+        case .tipB:
+            """
+            そして、渡された依存を元に遷移先のViewを作ります。
+            """
+        }
+    }
 }
 
 struct HowToUseDependencyProvider2Slide_Previews: PreviewProvider {

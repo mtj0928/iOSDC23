@@ -62,6 +62,23 @@ struct XcodePreviewConcernSlide: View {
             }
         }
     }
+
+    var script: String {
+        switch step {
+        case .initial:
+            """
+            まずは我々がXcode Previewを使う時の関心の範囲に着目してみましょう。
+            Xcode Previewを使うとき、多くの場合で特定の画面にだけ関心があり、遷移先など他の画面に対して関心があることは薄い気がします。
+            例えば、このItemListViewと、ItemListViewのPreviewの場合、
+            """
+        case .tip:
+            """
+            ItemListViewにだけ興味があり、遷移先のViewについては関心の範囲外だと思います。
+            なのでItemListViewだけをXcode Previewで確認できたら十分だと考えられます。
+            この性質を利用していきます。
+            """
+        }
+    }
 }
 
 struct XcodePreviewConcernSlide_Previews: PreviewProvider {

@@ -4,7 +4,12 @@ import SlideKit
 @Slide
 struct PreviewImageSlide: View {
     var body: some View {
-        GIFImage(name: "preview.gif")
+        HStack {
+//            Text("XcodePreview")
+//                .footnote()
+//                .frame(maxWidth: .infinity, alignment: .center)
+            GIFImage(name: "preview.gif")
+        }
     }
 }
 

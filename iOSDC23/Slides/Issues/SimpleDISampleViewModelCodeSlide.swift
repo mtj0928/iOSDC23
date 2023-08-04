@@ -86,6 +86,23 @@ struct SimpleDISampleViewModelCodeSlide: View {
         }
         """
     }
+
+    var script: String {
+        switch step {
+        case .initial:
+            """
+            DIの中でも一番シンプルなinitializer injectionの例を紹介したいと思います。
+            """
+        case .tipProtocol:
+            """
+            API Clientのためのprotocolを用意して、
+            """
+        case .tipInit:
+            """
+            ItemListViewModelのinitializerの中で、APIClientProtocolをDIします。
+            """
+        }
+    }
 }
 
 struct SimpleDISampleCodeSlide_Previews: PreviewProvider {

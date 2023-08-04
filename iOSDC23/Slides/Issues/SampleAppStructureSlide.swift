@@ -14,10 +14,10 @@ struct SampleAppStructureSlide: View {
         SampleAppStructure(step: .detail, highlight: highlight, scale: scale)
     }
 
-    var highlight: SampleAppStructure.Highlight? {
+    var highlight: [SampleAppStructure.Highlight] {
         switch step {
-        case .initial: return nil
-        case .focus: return .search
+        case .initial: return []
+        case .focus: return [.search]
         }
     }
 
