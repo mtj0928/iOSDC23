@@ -11,10 +11,9 @@ struct DependencyProviderImplementation3Slide: View {
     @Phase var step: Step
 
     var body: some View {
-        ScrollView {
-            HeaderSlide("DependencyProvider") {
-                Item("Environmentから依存を取り出し、unwrapするViewを作る", accessory: 3)
-                Code(
+        HeaderSlide("DependencyProvider") {
+            Item("Environmentから依存を取り出し、unwrapするViewを作る", accessory: 3)
+            Code(
                     """
                     struct DependencyProvider<ChildView: View>: View {
                         @Environment(\\.dependency) var dependency: AppDependency?
@@ -35,80 +34,85 @@ struct DependencyProviderImplementation3Slide: View {
                     }
                     """,
                     fontSize: 40
-                )
-                .lineSpacing(4)
-                .overlay(alignment: .topLeading) {
-                    ZStack(alignment: .topLeading) {
-                        if step == .tipA {
-                            bubble(
-                                orientation: .bottom,
-                                tipSize: CGSize(width: 20, height: 30),
-                                tipPostionRatio: 0.2
-                            ) {
-                                Text("Environmentから\n依存を取り出す")
-                                    .footnote()
-                                    .padding()
-                            }
-                            .offset(x: 1400, y: -105)
+            )
+            .lineSpacing(4)
+            .overlay(alignment: .topLeading) {
+                ZStack(alignment: .topLeading) {
+                    if step == .tipA {
+                        bubble(
+                            orientation: .bottom,
+                            tipSize: CGSize(width: 20, height: 30),
+                            tipPostionRatio: 0.2
+                        ) {
+                            Text("Environmentから\n依存を取り出す")
+                                .footnote()
+                                .padding()
                         }
-
-                        if step == .tipB {
-                            bubble {
-                                Text("ChildViewを外から差し込む")
-                                    .footnote()
-                                    .padding()
-                            }
-                            .offset(x: 1190, y: 143)
-                        }
-
-                        if step == .tipC {
-                            bubble {
-                                Text("依存が注入されていれば\n依存と共にChildViewを出す")
-                                    .footnote()
-                                    .padding()
-                            }
-                            .offset(x: 1090, y: 316)
-                        }
-
-                        if step == .tipD {
-                            bubble {
-                                Text("依存が注入されていなかったら\nそのことを表示する")
-                                    .footnote()
-                                    .padding()
-                            }
-                            .offset(x: 1090, y: 523)
-                        }
+                        .offset(x: 1400, y: -105)
                     }
-                }
-                .background(alignment: .topLeading) {
-                    ZStack(alignment: .topLeading) {
-                        if step == .tipA {
-                            highlightView
-                                .frame(width: 1530, height: 60)
-                                .offset(y: 45)
-                        }
 
-                        if step == .tipB {
-                            highlightView
-                                .frame(width: 1200, height: 60)
-                                .offset(y: 150)
+                    if step == .tipB {
+                        bubble {
+                            Text("ChildViewを外から差し込む")
+                                .footnote()
+                                .padding()
                         }
+                        .offset(x: 1190, y: 143)
+                    }
 
-                        if step == .tipC {
-                            highlightView
-                                .frame(width: 1100, height: 155)
-                                .offset(y: 304)
+                    if step.isAfter(.tipC) {
+                        bubble {
+                            Text("依存が注入されていれば\n依存と共にChildViewを出す")
+                                .footnote()
+                                .padding()
                         }
+                        .offset(x: 1090, y: 316)
+                        .opacity(step == .tipD ? 0.0 : 1.0)
+                    }
 
-                        if step == .tipD {
-                            highlightView
-                                .frame(width: 1100, height: 155)
-                                .offset(y: 508)
+                    if step.isAfter(.tipC) {
+                        bubble {
+                            Text("依存が注入されていなかったら\nそのことを表示する")
+                                .footnote()
+                                .padding()
                         }
+                        .offset(x: 1090, y: 523)
+                        .opacity(step == .tipC ? 0.0 : 1.0)
                     }
                 }
                 .animation(nil, value: step == .tipD)
             }
+            .background(alignment: .topLeading) {
+                ZStack(alignment: .topLeading) {
+                    if step == .tipA {
+                        highlightView
+                            .frame(width: 1530, height: 60)
+                            .offset(y: 45)
+                    }
+
+                    if step == .tipB {
+                        highlightView
+                            .frame(width: 1200, height: 60)
+                            .offset(y: 150)
+                    }
+
+                    if step.isAfter(.tipC) {
+                        highlightView
+                            .frame(width: 1100, height: 155)
+                            .offset(y: 304)
+                            .opacity(step == .tipD ? 0.0 : 1.0)
+                    }
+
+                    if step.isAfter(.tipC) {
+                        highlightView
+                            .frame(width: 1100, height: 155)
+                            .offset(y: 508)
+                            .opacity(step == .tipC ? 0.0 : 1.0)
+                    }
+                }
+                .animation(nil, value: step == .tipD)
+            }
+            .fixedSize()
         }
         .padding(.top, step == .tipD ? -150 : 0)
         .animation(.easeInOut, value: step == .tipD)

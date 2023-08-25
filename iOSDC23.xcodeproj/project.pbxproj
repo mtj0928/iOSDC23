@@ -50,6 +50,7 @@
 		18911C682A666B6B0047652B /* XcodePreviewConcernSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18911C672A666B6B0047652B /* XcodePreviewConcernSlide.swift */; };
 		18911C6A2A68C8130047652B /* IdeaSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18911C692A68C8130047652B /* IdeaSlide.swift */; };
 		18AD304E2A5E230A00326717 /* SampleAppStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD304D2A5E230A00326717 /* SampleAppStructure.swift */; };
+		18B553EA2A96561B000ED1CB /* Benefit0Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B553E92A96561B000ED1CB /* Benefit0Slide.swift */; };
 		18BF72F22A56381A003EC724 /* SampleAppSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF72F12A56381A003EC724 /* SampleAppSlide.swift */; };
 		18BF72F42A56387C003EC724 /* View+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF72F32A56387C003EC724 /* View+Font.swift */; };
 		18BFE4732A64EF1A00302D33 /* IssueComparingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFE4722A64EF1A00302D33 /* IssueComparingSlide.swift */; };
@@ -101,6 +102,7 @@
 		18911C672A666B6B0047652B /* XcodePreviewConcernSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodePreviewConcernSlide.swift; sourceTree = "<group>"; };
 		18911C692A68C8130047652B /* IdeaSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaSlide.swift; sourceTree = "<group>"; };
 		18AD304D2A5E230A00326717 /* SampleAppStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppStructure.swift; sourceTree = "<group>"; };
+		18B553E92A96561B000ED1CB /* Benefit0Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benefit0Slide.swift; sourceTree = "<group>"; };
 		18BF72F12A56381A003EC724 /* SampleAppSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppSlide.swift; sourceTree = "<group>"; };
 		18BF72F32A56387C003EC724 /* View+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Font.swift"; sourceTree = "<group>"; };
 		18BFE4722A64EF1A00302D33 /* IssueComparingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueComparingSlide.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				18D6BA3B2A6D024A0028FEBC /* HowToUseDependencyProvider1Slide.swift */,
 				186075CE2A6D1AAC001815DA /* HowToUseDependencyProvider2Slide.swift */,
 				183671FB2A6DF1600000657C /* PreviewImageSlide.swift */,
+				18B553E92A96561B000ED1CB /* Benefit0Slide.swift */,
 				183671FD2A6DF5210000657C /* Benefit1Slide.swift */,
 				183671FF2A6DF8090000657C /* Benefit2Slide.swift */,
 				183672012A6F45850000657C /* Benefit3Slide.swift */,
@@ -339,6 +342,7 @@
 				181E28D42A5D9DC50045CC6B /* PassingHardAppStructureSlide.swift in Sources */,
 				185092FA2A6BE5B8004C5FA7 /* DependencyProviderImplementation1Slide.swift in Sources */,
 				1824470D2A7567A8009D7247 /* WrapUpSlide.swift in Sources */,
+				18B553EA2A96561B000ED1CB /* Benefit0Slide.swift in Sources */,
 				185FD13C2A56F6D10067C8C9 /* CodeSlide.swift in Sources */,
 				C4FA7465D5F995F91E345731 /* SlideConfiguration.swift in Sources */,
 				182320692A50F4A300F5C71A /* Color+extension.swift in Sources */,

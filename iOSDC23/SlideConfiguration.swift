@@ -49,6 +49,7 @@ struct SlideConfiguration {
         HowToUseDependencyProvider1Slide()
         HowToUseDependencyProvider2Slide()
         PreviewImageSlide()
+        Benefit0Slide()
         Benefit1Slide()
         Benefit2Slide()
         Benefit3Slide()

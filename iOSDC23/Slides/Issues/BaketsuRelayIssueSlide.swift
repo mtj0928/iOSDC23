@@ -4,7 +4,7 @@ import SlideKit
 @Slide
 struct BaketsuRelayIssueSlide: View {
     enum Step: Int, PhasedState {
-        case initial, tip, comment
+        case initial, tip, moreDependency, comment
     }
 
     @Phase var step: Step
@@ -12,34 +12,25 @@ struct BaketsuRelayIssueSlide: View {
     var body: some View {
         HeaderSlide("バケツリレーの課題") {
             Item("検索画面はAPIを叩くだけなのに、DBの情報も渡す必要がある", accessory: nil)
-            Code(
-                """
-                ItemListView(
-                    db: MockDatabase(),
-                    viewModel: ItemListViewModel(apiClient: MockAPIClient())
-                )
-                """,
-
-                fontSize: 40
-            )
-            .lineSpacing(4)
-            .padding(.vertical, 40)
+            Code(code, fontSize: 40)
+                .lineSpacing(4)
+                .padding(.vertical, 20)
             if step.isAfter(.comment) {
                 Item("画面数が増えれば増えるほど「これなんで必要...？」が増える", accessory: nil)
             }
         }
         .overlay(alignment: .topLeading) {
-            if step.isAfter(.tip) {
+            if step == .tip {
                 Color.white.opacity(0.7)
-                    .frame(height: 60)
+                    .frame(height: 135)
                     .offset(x: 0, y: 360)
                 Color.white.opacity(0.7)
-                    .frame(height: 120)
-                    .offset(x: 0, y: 500)
+                    .frame(height: 60)
+                    .offset(x: 0, y: 510)
             }
         }
         .overlay {
-            if step.isAfter(.tip) {
+            if step == .tip {
                 Bubble(
                     orientation: .leading,
                     tipSize: CGSize(width: 30, height: 10)
@@ -53,8 +44,32 @@ struct BaketsuRelayIssueSlide: View {
                         .foregroundStyle(Color.label)
                 }
                 .foregroundStyle(.white)
-                .offset(x: -200, y: -70)
+                .offset(x: -220, y: -15)
             }
+        }
+    }
+
+    var code: String {
+        if step.isAfter(.moreDependency) {
+            """
+            ItemListView(
+                viewModel: ItemListViewModel(apiClient: MockAPIClient()),
+                db: MockDatabase(),
+                keychain: MockKeychain(),
+                fileManager: MockFileManager(),
+                userDefaults: MockUserDefaults(),
+                authManager: MockAuthManager(),
+                logger: MockLogger(),
+                ...
+            )
+            """
+        } else {
+            """
+            ItemListView(
+                viewModel: ItemListViewModel(apiClient: MockAPIClient()),
+                db: MockDatabase()
+            )
+            """
         }
     }
 
@@ -79,11 +94,11 @@ struct BaketsuRelayIssueSlide: View {
             このItemListViewをインターフェースを見た時に
             """
         case .tip:
-            """
-            「これ必要...？」と感じます。
-            """
+            "「これ必要...？」と感じますよね。"
+        case .moreDependency:
+            "Qitta Viewerはとてもまだまだ画面の数が少ない小さなアプリですが、画面の数が増えるとこのように渡す依存の数が増えてしまいます。"
         case .comment:
-            "そしてこれは画面の数が増えれば増えるほど、「なんでこれが必要なのか？」と感じるパラメーターが増えます。"
+            "画面の数が増えれば増えるほど、「なんでこれが必要なのか？」と感じるパラメーターが増えてしまいます。"
         }
     }
 }
@@ -92,7 +107,7 @@ struct BaketsuRelayIssueSlide_Previews: PreviewProvider {
     static var previews: some View {
         SlidePreview {
             BaketsuRelayIssueSlide()
-                .phase(.initial)
+                .phase(.comment)
         }
         .headerSlideStyle(CustomHeaderSlideStyle())
         .itemStyle(CustomItemStyle())

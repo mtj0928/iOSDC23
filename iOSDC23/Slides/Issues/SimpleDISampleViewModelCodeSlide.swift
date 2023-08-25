@@ -5,7 +5,7 @@ import SlideKit
 struct SimpleDISampleViewModelCodeSlide: View {
 
     enum Step: Int, PhasedState {
-        case initial, tipProtocol, tipInit
+        case initial, tipProtocol, tipInit, tipUsage
     }
 
     @Phase var step: Step
@@ -19,6 +19,9 @@ struct SimpleDISampleViewModelCodeSlide: View {
                 }
                 if step.isAfter(.tipInit) {
                     CodeHighlightBackground(height: 270, y: 40)
+                }
+                if step.isAfter(.tipUsage) {
+                    CodeHighlightBackground(height: 60, y: 302)
                 }
             }
             .overlay(alignment: .leading) {
@@ -49,6 +52,21 @@ struct SimpleDISampleViewModelCodeSlide: View {
                     }
                     .foregroundStyle(.white)
                     .offset(x: 1200, y: 40)
+                }
+            }
+            .overlay(alignment: .leading) {
+                if step.isAfter(.tipUsage) {
+                    Bubble(tipSize: CGSize(width: 60, height: 20), cornerRadius: 10) {
+                        Text("シングルトンの代わりに\nDIされたAPIClinetを使う")
+                            .footnote()
+                            .padding(32)
+                    }
+                    .bubbleShape { shape in
+                        shape.stroke(lineWidth: 2)
+                            .foregroundStyle(Color.label)
+                    }
+                    .foregroundStyle(.white)
+                    .offset(x: 1200, y: 305)
                 }
             }
     }
@@ -101,6 +119,10 @@ struct SimpleDISampleViewModelCodeSlide: View {
             """
             ItemListViewModelのinitializerの中で、APIClientProtocolをDIします。
             """
+        case .tipUsage:
+            """
+            そして、DIされたAPIClientをシングルトンの代わりに使います
+            """
         }
     }
 }
@@ -109,7 +131,7 @@ struct SimpleDISampleCodeSlide_Previews: PreviewProvider {
     static var previews: some View {
         SlidePreview {
             SimpleDISampleViewModelCodeSlide()
-                .phase(.tipInit)
+                .phase(.tipUsage)
         }
     }
 }

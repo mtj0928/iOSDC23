@@ -23,7 +23,6 @@ struct XcodePreviewConcernSlide: View {
                     ItemListView(viewModel: ...)
                 }
             }
-
             """,
             fontSize: 40
             )
@@ -44,7 +43,7 @@ struct XcodePreviewConcernSlide: View {
                             .foregroundStyle(Color.label)
                     }
                     .foregroundStyle(.white)
-                    .offset(x: 965, y: 280)
+                    .offset(x: 965, y: 160)
                 }
             }
             .background(alignment: .topLeading) {
@@ -57,7 +56,7 @@ struct XcodePreviewConcernSlide: View {
                                 .stroke(lineWidth: 1)
                                 .foregroundStyle(.blue)
                         }
-                        .offset(x: 80, y: 280)
+                        .offset(x: 80, y: 150)
                 }
             }
         }

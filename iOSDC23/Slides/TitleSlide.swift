@@ -14,8 +14,23 @@ struct TitleSlide: View {
             + Text("（@mtj_j）")
                 .font(.system(size: 45, weight: .bold))
         }
+        .foregroundStyle(.white)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .padding(48)
+        .overlay(alignment: .bottomTrailing) {
+            Image(.deer)
+                .resizable()
+                .scaledToFill()
+                .clipShape(Circle())
+                .frame(width: 700, height: 700)
+                .offset(x: 100, y: 100)
+        }
+        .background {
+            Image(.deer)
+                .resizable()
+                .scaledToFill()
+                .overlay(Material.ultraThin)
+        }
     }
 
     var script: String {
