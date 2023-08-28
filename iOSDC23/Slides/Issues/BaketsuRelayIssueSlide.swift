@@ -16,17 +16,17 @@ struct BaketsuRelayIssueSlide: View {
                 .lineSpacing(4)
                 .padding(.vertical, 20)
             if step.isAfter(.comment) {
-                Item("画面数が増えれば増えるほど「これなんで必要...？」が増える", accessory: nil)
+                Item("画面数が増えれば増えるほどXcode Previewに渡す依存が増える", accessory: nil)
             }
         }
         .overlay(alignment: .topLeading) {
             if step == .tip {
                 Color.white.opacity(0.7)
-                    .frame(height: 135)
-                    .offset(x: 0, y: 360)
+                    .frame(height: 130)
+                    .offset(x: 0, y: 355)
                 Color.white.opacity(0.7)
                     .frame(height: 60)
-                    .offset(x: 0, y: 510)
+                    .offset(x: 0, y: 500)
             }
         }
         .overlay {
@@ -44,7 +44,7 @@ struct BaketsuRelayIssueSlide: View {
                         .foregroundStyle(Color.label)
                 }
                 .foregroundStyle(.white)
-                .offset(x: -220, y: -15)
+                .offset(x: -220, y: -35)
             }
         }
     }

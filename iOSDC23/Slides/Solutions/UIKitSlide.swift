@@ -10,6 +10,7 @@ struct UIKitSlide: View {
     @Phase var step: Step
 
     var body: some View {
+        // UIKitでEmvironmentをどうするの？
         HeaderSlide("UIKitでの対応") {
             VStack(alignment: .leading, spacing: 24) {
                 Text("iOS16: 従来のInitializer Injection")
