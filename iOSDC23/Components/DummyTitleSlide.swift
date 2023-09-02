@@ -9,6 +9,7 @@ struct DummyTitleSlide: View {
         Image(.title)
             .resizable()
             .scaledToFill()
+            .padding(-2)
     }
 
     var script: String {

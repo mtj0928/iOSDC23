@@ -133,6 +133,7 @@
 		182320662A50F0CA00F5C71A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				187C855C2AA1AB70003D2F89 /* DummyTitleSlide.swift */,
 				182320642A506EF200F5C71A /* CenterTitleSlide.swift */,
 				188725BF2A5A550A00C1A602 /* GIFImage.swift */,
 				185FD13B2A56F6D10067C8C9 /* CodeSlide.swift */,
@@ -219,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				183685A92A4DBA48005EB87A /* TitleSlide.swift */,
-				187C855C2AA1AB70003D2F89 /* DummyTitleSlide.swift */,
 				188725A82A59629800C1A602 /* AgendaSlide.swift */,
 				18911C612A6549AC0047652B /* Issues */,
 				18911C622A6574B10047652B /* Solutions */,
