@@ -14,7 +14,9 @@ struct SlideConfiguration {
 
     ///  Add your slides into the trailing closure.
     let slideIndexController = SlideIndexController {
-        TitleSlide()
+//        TitleSlide()
+        DummyTitleSlide()
+
         XcodePreviewSlide()
         AgendaSlide()
         AgendaSlide(highlight: 1)
@@ -24,8 +26,8 @@ struct SlideConfiguration {
         SimpleSampleViewCodeSlide()
         SimpleSamplePreviewCodeSlide()
         SimpleImplementationIssueSlide()
-        CenterTitleSlide("Dependency Injection")
-        CenterTitleSlide("Initializer Injection")
+        CenterTitleSlide("Dependency Injection", script: "そこでDependency Injectionが必要になります")
+        CenterTitleSlide("Initializer Injection", script: "まずはDIの中でも一番シンプルなinitializer injectionの例を紹介したいと思います")
         SimpleDISampleViewModelCodeSlide()
         SimpleDISampleViewCodeSlide()
         SimpleDIMockSlide()
@@ -53,6 +55,8 @@ struct SlideConfiguration {
         Benefit1Slide()
         Benefit2Slide()
         Benefit3Slide()
+
+        CenterTitleSlide("でもこの方法ってSwiftUIだけですよね？")
         UIKitSlide()
 
         WrapUpSlide()

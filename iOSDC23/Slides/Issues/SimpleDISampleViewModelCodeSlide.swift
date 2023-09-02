@@ -109,11 +109,11 @@ struct SimpleDISampleViewModelCodeSlide: View {
         switch step {
         case .initial:
             """
-            DIの中でも一番シンプルなinitializer injectionの例を紹介したいと思います。
+            これがその実装になります。少し長いですが、内容は簡単ですし、丁寧に説明もするので安心してください。
             """
         case .tipProtocol:
             """
-            API Clientのためのprotocolを用意して、
+            まずは、APIClientのためのprotocolを用意して、
             """
         case .tipInit:
             """

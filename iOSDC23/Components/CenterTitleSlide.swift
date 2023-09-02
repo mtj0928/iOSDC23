@@ -4,9 +4,11 @@ import SlideKit
 @Slide
 struct CenterTitleSlide: View {
     private let text: String
+    let script: String
 
-    init(_ text: String) {
+    init(_ text: String, script: String = "") {
         self.text = text
+        self.script = script
     }
 
     var body: some View {

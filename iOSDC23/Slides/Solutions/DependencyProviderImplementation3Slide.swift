@@ -28,6 +28,8 @@ struct DependencyProviderImplementation3Slide: View {
                                 Text("Dependency is not set.")
                                     // ...
                                     .background(.red)
+                    #else
+                                EmptyView()
                     #endif
                             }
                         }
@@ -114,7 +116,7 @@ struct DependencyProviderImplementation3Slide: View {
             }
             .fixedSize()
         }
-        .padding(.top, step == .tipD ? -150 : 0)
+        .padding(.top, step == .tipD ? -600 : 0)
         .animation(.easeInOut, value: step == .tipD)
     }
 
@@ -185,7 +187,7 @@ struct DependencyProviderImplementation3Slide_Previews: PreviewProvider {
     static var previews: some View {
         SlidePreview {
             DependencyProviderImplementation3Slide()
-                .phase(.tipA)
+                .phase(.tipD)
         }
         .headerSlideStyle(CustomHeaderSlideStyle())
         .itemStyle(CustomItemStyle())

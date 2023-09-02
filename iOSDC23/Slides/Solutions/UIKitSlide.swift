@@ -4,33 +4,23 @@ import SlideKit
 @Slide
 struct UIKitSlide: View {
     enum Step: Int, PhasedState {
-         case initial, ios17
+         case initial
     }
 
     @Phase var step: Step
 
     var body: some View {
-        // UIKitでEmvironmentをどうするの？
-        HeaderSlide("UIKitでの対応") {
-            VStack(alignment: .leading, spacing: 24) {
-                Text("iOS16: 従来のInitializer Injection")
-                    .font(.system(size: 54, weight: .semibold))
-                Text("SwiftUIと違って型に対して厳密ではないので、Coordinatorパターンなどで対応可能")
+        HeaderSlide("iOS17からはUIKitでもできます") {
+            Item("UITraitCollectionでSwiftUIのEnvironmentと同様のことが可能に！", accessory: nil)
+            Item("詳しくはWWDCのセッション動画を参照してください", accessory: nil)
+            Spacer()
+            VStack(alignment: .leading) {
+                Image(.wwdc)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 400)
+                Text("https://developer.apple.com/videos/play/wwdc2023/10057/")
                     .footnote()
-            }
-            .padding(.bottom, 48)
-
-            if step.isAfter(.ios17) {
-                VStack(alignment: .leading, spacing: 24) {
-                    Text("iOS17: UITraitCollectionが使えるかも？")
-                        .font(.system(size: 54, weight: .semibold))
-                    Text("SwiftUIのEnvironmentと同様のことがUITraitCollectionで実現可能に！？")
-                        .footnote()
-                    Image("wwdc")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 400)
-                }
             }
         }
     }

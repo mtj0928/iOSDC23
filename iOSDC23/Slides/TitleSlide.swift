@@ -36,6 +36,8 @@ struct TitleSlide: View {
     var script: String {
         """
         こんにちは、まつじです。
+        それでは、XcodePreviewを気軽に使うDI戦略というタイトルで発表を始めます。
+        実はこのプレゼンスライドは全てSwiftUIで実装しています。
         """
     }
 }

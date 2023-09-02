@@ -55,6 +55,7 @@ struct iOSDC23App: App {
             ) {
                 presentationContentView
             }
+            .footnote()
         }
         .setupAsPresenterWindow()
     }
