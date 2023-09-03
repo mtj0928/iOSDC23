@@ -14,8 +14,8 @@ struct SlideConfiguration {
 
     ///  Add your slides into the trailing closure.
     let slideIndexController = SlideIndexController {
-//        TitleSlide()
-        DummyTitleSlide()
+        TitleSlide()
+//        DummyTitleSlide()
 
         XcodePreviewSlide()
         AgendaSlide()
@@ -60,5 +60,6 @@ struct SlideConfiguration {
         UIKitSlide()
 
         WrapUpSlide()
+        AdvertiseSlide()
     }
 }
